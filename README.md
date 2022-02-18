@@ -1,2 +1,2 @@
 # quickly
-An ecosystem housing different applications and servers under Quickly. 
+An ecosystem housing different applications and services under Quickly. 
