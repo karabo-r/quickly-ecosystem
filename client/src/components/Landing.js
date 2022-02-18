@@ -6,6 +6,17 @@ const Landing = () => {
   return (
     <Container>
       <LandingTitle>Qucikly</LandingTitle>
+      <Description>
+        Don't waste time going into rabitholes. Create Qr-codes, search for
+        emojis and more quickly.
+      </Description>
+      <Button
+        variant="contained"
+        disableElevation
+        sx={{ p: "1rem 2rem", t: "5rem" }}
+      >
+        Explore
+      </Button>
     </Container>
   );
 };
@@ -16,6 +27,7 @@ const Container = styled.div`
   justify-content: center;
   /* margin-bottom: 20px; */
   align-items: center;
+  flex-direction: column;
 
   /* transform: translateY(-20%); */
 `;
@@ -26,7 +38,7 @@ const TitleAnimation = keyframes`
         transform: translateY(0%);
     }
     to{
-        transform: translateY(-200%);
+        transform: translateY(-70%);
     }
    
 `;
@@ -36,6 +48,14 @@ const LandingTitle = styled.h1`
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   /* text-align: center; */
+`;
+
+const Description = styled.p`
+  font-size: 1.6rem;
+  max-width: 50%;
+  text-align: center;
+  line-height: 2rem;
+  margin-bottom: 50px;
 `;
 
 export default Landing;
