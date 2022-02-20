@@ -4,12 +4,14 @@ import Landing from "./components/Landing";
 import Qr_Code from "./components/Qr_Code/Qr_Code";
 import Emoji_Search from "./components/Emoji_Search/Emoji_Search";
 import Author from "./components/Author";
-import Menu from "./components/Menu";
+import NavMenu from "./components/NavMenu";
+import Theme from "./components/Theme";
 
 const App = () => {
   return (
     <Container>
-      <Menu />
+      <NavMenu />
+      <Theme />
       <Landing />
       {/* <Qr_Code /> */}
       {/* <Emoji_Search /> */}
