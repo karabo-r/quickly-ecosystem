@@ -7,8 +7,8 @@ const Landing = () => {
     <Container>
       <LandingTitle>Qucikly</LandingTitle>
       <Description>
-        A housing for all quickly applications. Don't waste time going into
-        rabitholes. Create Qr-codes, search for emojis and more quickly.
+        A housing for all quickly applications. <br /> Don't waste time going
+        into rabitholes.
       </Description>
       <Button
         variant="contained"
