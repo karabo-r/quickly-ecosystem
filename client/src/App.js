@@ -1,29 +1,35 @@
-import React from "react";
-import styled from "styled-components";
-import Landing from "./components/Landing";
-import Qr_Code from "./components/Qr_Code/Qr_Code";
-import Emoji_Search from "./components/Emoji_Search/Emoji_Search";
-import Author from "./components/Author";
-import NavMenu from "./components/NavMenu";
-import Theme from "./components/Theme";
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import App_Options from './Components/App_Options';
+import Contacts from './Components/Contacts';
+import Home_Page from './Components/Home_Page';
+import Logo from './Components/Logo';
+
 
 const App = () => {
+
+  const [viewAppOptions, setViewAppOptions] = useState(false)
+
+  function ChangeOptionView(){
+    setViewAppOptions(prev=>!prev)
+  }
+
   return (
     <Container>
-      <NavMenu />
-      <Theme />
-      <Landing />
-      {/* <Qr_Code /> */}
-      {/* <Emoji_Search /> */}
-      <Author />
+      <Logo handleClick={ChangeOptionView}/>
+      {viewAppOptions ? <App_Options/>: <Home_Page handleClick={ChangeOptionView}/> }
+      <Contacts/>
     </Container>
-  );
-};
+  )
+}
 
 const Container = styled.div`
-  font-family: "Montserrat", sans-serif;
   height: 100vh;
-  width: 100%;
-  font-weight: 500;
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
-export default App;
+
+export default App
