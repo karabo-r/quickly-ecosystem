@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const Contacts = () => {
   return (
     <Container>
-        <li><a href=''>Github</a></li>
-        <li><a href=''>Twitter</a></li>
+        <li><a href='https://github.com/karabo-r'>Github</a></li>
+        <li><a href='https://twitter.com/karabo_dev'>Twitter</a></li>
     </Container>
   )
 }
