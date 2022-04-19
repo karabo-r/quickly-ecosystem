@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Logo = (props) => {
   return (
-    <Container onClick={props.handleClick}>
+    <Container onClick={props.ChangeOptionView}>
       <h1 title='View more Quickly apps'>Quickly</h1>
       <span></span>
     </Container>

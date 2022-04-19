@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import App_Options from './Components/App_Options';
+import AppsDisplay from './Pages/AppsDisplay';
 import Contacts from './Components/Contacts';
-import Home_Page from './Components/Home_Page';
+import Home_Page from './Pages/Home_Page';
 import Logo from './Components/Logo';
 
 
@@ -14,10 +14,18 @@ const App = () => {
     setViewAppOptions(prev=>!prev)
   }
 
+  const propsCollection = {
+    ChangeOptionView,
+  }
+
+
+
   return (
     <Container>
-      <Logo handleClick={ChangeOptionView}/>
-      {viewAppOptions ? <App_Options/>: <Home_Page handleClick={ChangeOptionView}/> }
+      <Logo {...propsCollection}/>
+      {viewAppOptions 
+      ? <AppsDisplay/>
+      : <Home_Page {...propsCollection}/> }
       <Contacts/>
     </Container>
   )
