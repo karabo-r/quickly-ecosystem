@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
+import {RecoilRoot} from 'recoil'
 import styled from 'styled-components'
 import AppsDisplay from './Pages/AppsDisplay';
 import Contacts from './Components/Contacts';
 import Home_Page from './Pages/Home_Page';
 import Logo from './Components/Logo';
+// import StateCleanUp from './Modules/StateCleanUp';
 
 
 const App = () => {
 
   const [viewAppOptions, setViewAppOptions] = useState(false)
 
+  
   function ChangeOptionView(){
     setViewAppOptions(prev=>!prev)
+    // StateCleanUp()
   }
 
   const propsCollection = {
@@ -21,6 +25,8 @@ const App = () => {
 
 
   return (
+    <RecoilRoot>
+
     <Container>
       <Logo {...propsCollection}/>
       {viewAppOptions 
@@ -28,6 +34,7 @@ const App = () => {
       : <Home_Page {...propsCollection}/> }
       <Contacts/>
     </Container>
+      </RecoilRoot>
   )
 }
 

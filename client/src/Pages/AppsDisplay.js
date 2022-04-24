@@ -1,16 +1,32 @@
 import React, { useState } from 'react'
-import Quickly_QR from '../Apps/Quickly-QR/Quickly_QR'
-// import App_Options from '../Components/App_Options'
+import App_Options from '../Components/App_Options'
+import Quickly_QR from '../Apps/Quickly_QR/Quickly_QR'
 
 const AppsDisplay = () => {
 
-  const [appInView, setAppInView] = useState(true)
+  const [selectedApp, setSelectedApp] = useState('none')
+  
+  let viewSelectedApp;
+  
+  const changeToSelectedApp = (appName) =>{
+    setSelectedApp(appName)
+  }
 
+  const propsCollection = {
+    changeToSelectedApp
+  }
 
+  if (selectedApp === 'qucikly-qr') {
+      viewSelectedApp = <Quickly_QR />
+  }else{
+      viewSelectedApp = <App_Options {...propsCollection} />
+  }
 
   return (
-    <Quickly_QR/>
-    )
+    <>
+      {viewSelectedApp}
+    </>
+  )
 }
 
 export default AppsDisplay

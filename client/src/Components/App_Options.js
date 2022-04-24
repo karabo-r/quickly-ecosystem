@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+
+
 
 const App_Options = (props) => {
 
-  const view = 'cake'
+
+  const prepareAppView = (e) => {
+    e.preventDefault();
+    const testValue = document.getElementById('testValue')
+    console.log(testValue.value);
+    props.changeToSelectedApp(testValue.value)
+  }
 
   return (
     <>
@@ -11,23 +19,13 @@ const App_Options = (props) => {
     <Devnotice>*some apps are still in development</Devnotice>
 
     <Container>
-      
-      <Box>
-        <Title>Upload</Title>
-        <Description>Save files temporary.</Description>
-        <Button>Upload</Button>
-      </Box>
-
-      <Box>
-        <Title>Notes</Title>
-        <Description>Write and save notes</Description>  
-        <Button>Write</Button>
-      </Box>
-
       <Box>
         <Title>QR</Title>
         <Description>Create QR codes</Description>  
-        <Button onClick={props.ChangeToQR}>Create</Button>
+        <form onSubmit={prepareAppView}>
+          <input type='text' value='qucikly-qr' style={{"display": "none"}} readOnly id='testValue'/>
+          <Button type='submit' >Create</Button>
+        </form>
       </Box>
 
     </Container>
@@ -39,7 +37,7 @@ const Container = styled.div`
   height: 65vh;
   width: 96%;
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
+  /* grid-template-columns: 33.3% 33.3% 33.3%; */
 
   @media screen and (max-width: 800px) {
     display: block;
@@ -66,7 +64,7 @@ const Devnotice = styled.p`
 `
 const Title = styled.h1`
   margin-bottom: 2rem;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
 `
 const Description = styled.p`

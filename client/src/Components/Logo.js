@@ -15,7 +15,7 @@ display: flex;
 align-items: center;
   position: absolute;
   bottom: 2.6rem;
-  left: 5rem;
+  left: 4rem;
   height: 3rem;
   /* background-color: rebeccapurple; */
 

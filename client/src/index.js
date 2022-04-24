@@ -1,6 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// import {RecoilRoot} from 'recoil';
 import './Styles/index.css'
 import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+
+ReactDOM.render(
+    // <RecoilRoot>
+        <App />,
+        document.getElementById("root")
+    // </RecoilRoot>
+);

@@ -10,23 +10,24 @@ const QR_Creation = (props) => {
     <Title2>Quickly QR</Title2>
     {props.qrcreated && 
       <>
-      <TextArea ref={props.textRef} onChange={props.handleText}></TextArea>
-      <Button onClick={props.generateQr}>generate</Button>
+      <TextArea ref={props.textInputRef} onChange={props.handleTextInput}></TextArea>
+      <Button onClick={props.generateQrImage}>generate</Button>
     </>}
 
     {!props.qrcreated && 
     <>
+      <div id='imageContainer'>
+        <img src={props.imageLink} alt='image of the generated QR code'/>
+      </div>
       <Description>
         Thank you! 💚
         <p>Scan feature coming soon</p>
       </Description>
       
-      <Button onClick={props.handleDownload}>Download</Button>
+      <Button onClick={props.handleImageDownload}>Download</Button>
     </>
     }
     
-    {props.imageDownloadButton}
-    {props.image}
     </>
   )
 }
