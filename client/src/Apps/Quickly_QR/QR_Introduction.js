@@ -1,17 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Title, Button, Description } from '../../Styles/Base_Style'
+// import 
+
 
 const QR_Introduction = (props) => {
 
   return (
     <Container>
-      <Title>
+      <Title style={{"fontSize": "4rem"}}>
         Quickly QR
       </Title>
       <Description> 
         Generate a QR code in just a few seconds by input.
       </Description>
+
       <Button onClick={props.changeIntroductionView}>
         Create
       </Button>
@@ -31,6 +34,7 @@ const Container = styled.div`
 
   @media screen and (max-width: 800px) {
     /* display: block; */
+    width: 100%;
     overflow: auto;
     display: flex;
     align-items: center;

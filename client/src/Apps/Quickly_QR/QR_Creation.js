@@ -4,6 +4,7 @@ import { Button, Title2, Description } from '../../Styles/Base_Style'
 
 
 const QR_Creation = (props) => {
+  
 
   return (
     <>
@@ -12,6 +13,9 @@ const QR_Creation = (props) => {
       <>
       <TextArea ref={props.textInputRef} onChange={props.handleTextInput}></TextArea>
       <Button onClick={props.generateQrImage}>generate</Button>
+      {props.failedToGenerate &&
+      <ConnectionError>Connect to the internet or try again later</ConnectionError>
+      }
     </>}
 
     {props.qrcreated && 
@@ -42,5 +46,10 @@ const TextArea = styled.textarea`
   border-radius: 5px;
   margin-bottom: 3rem;
 `
-
+const ConnectionError = styled.h3`
+  position: absolute;
+  color: red;
+  bottom: 10rem;
+  /* margin-top: 2rem; */
+`
 export default QR_Creation

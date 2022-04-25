@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import {Title, Button, Description} from "../Styles/Base_Style";
+import { Link } from "react-router-dom";
 
-
-const Home_Page = (props) => {
+const Home_Page = () => {
   return (
     <Container>
       <Title>Quickly</Title>
@@ -11,7 +11,9 @@ const Home_Page = (props) => {
       A housing for all Quickly apps. <br/>
       Stop wasting time going into rabbit holes. Do more, quickly.
       </Description>
-      <Button onClick={props.ChangeOptionView}>Explore</Button>
+      <Link to="/options">
+        <Button>Explore</Button>
+      </Link>
     </Container>
   );
 };

@@ -8,6 +8,7 @@ import DownloadImage from './API/DownloadImage'
 const Quickly_QR = () => {
 
   const [viewIntroduction, setViewIntroduction] = useState(true)
+  const [failedToGenerate, setFailedToGenerate] = useState(false)
   const [qrcreated, setqrcreated] = useState(false)
   const [imageLink, setImagelink] = useState('')
   const [text, setText] = useState('')
@@ -24,7 +25,7 @@ const Quickly_QR = () => {
 
   const generateQrImage = () => {
     textInputRef.current.value = ''
-    FetchImage(text, setImagelink, setqrcreated)
+    FetchImage(text, setImagelink, setqrcreated, setFailedToGenerate)
   }
 
   const handleImageDownload = () =>{
@@ -36,9 +37,10 @@ const Quickly_QR = () => {
     handleImageDownload,
     handleTextInput,
     generateQrImage,
+    failedToGenerate,
     textInputRef,
     qrcreated,
-    imageLink
+    imageLink,
   }
 
   return (

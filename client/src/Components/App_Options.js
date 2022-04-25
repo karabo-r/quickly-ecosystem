@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {Link} from 'react-router-dom'
 
 
 const App_Options = (props) => {
@@ -22,10 +22,11 @@ const App_Options = (props) => {
       <Box>
         <Title>QR</Title>
         <Description>Create QR codes</Description>  
-        <form onSubmit={prepareAppView}>
-          <input type='text' value='qucikly-qr' style={{"display": "none"}} readOnly id='testValue'/>
+
+          <Link to="quickly-qr">
           <Button type='submit' >Create</Button>
-        </form>
+          </Link> 
+        
       </Box>
 
     </Container>
