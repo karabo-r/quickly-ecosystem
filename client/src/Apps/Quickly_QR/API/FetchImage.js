@@ -9,6 +9,6 @@ export default function fetchImage(data, set, alert){
     .then(file=>{
         const fileurl = URL.createObjectURL(file)
         set(fileurl)
-        alert(false)
+        alert(true)
     })
 }

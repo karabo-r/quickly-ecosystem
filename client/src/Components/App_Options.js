@@ -36,12 +36,18 @@ const App_Options = (props) => {
 const Container = styled.div`
   height: 65vh;
   width: 96%;
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rebeccapurple; */
+  /* display: grid; */
+  /* align-items: center; */
   /* grid-template-columns: 33.3% 33.3% 33.3%; */
 
   @media screen and (max-width: 800px) {
-    display: block;
+    /* display: block; */
     overflow: auto;
+    
   }
 `
 

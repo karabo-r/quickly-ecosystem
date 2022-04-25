@@ -1,16 +1,15 @@
 import React, { useRef, useState } from 'react'
-import { useRecoilState } from 'recoil'
 import QR_Introduction from './QR_Introduction'
 import QR_Creation from './QR_Creation'
 import FetchImage from './API/FetchImage'
 import DownloadImage from './API/DownloadImage'
-import { Image_URL } from '../../Recoil/Quickly_QR/Image_URL'
+
 
 const Quickly_QR = () => {
 
   const [viewIntroduction, setViewIntroduction] = useState(true)
-  const [imageLink, setImagelink] = useRecoilState(Image_URL)
-  const [qrcreated, setqrcreated] = useState(true)
+  const [qrcreated, setqrcreated] = useState(false)
+  const [imageLink, setImagelink] = useState('')
   const [text, setText] = useState('')
 
   const textInputRef = useRef(null)
@@ -45,7 +44,9 @@ const Quickly_QR = () => {
   return (
     <>
       {viewIntroduction 
+      // eslint-disable-next-line react/jsx-pascal-case
       ? <QR_Introduction {...propsCollection}/> 
+      // eslint-disable-next-line react/jsx-pascal-case
       : <QR_Creation {...propsCollection}/> }
     </>
   )

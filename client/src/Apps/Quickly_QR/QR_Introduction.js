@@ -23,10 +23,19 @@ const QR_Introduction = (props) => {
 const Container = styled.div`
   font-family: Arial;
   display: flex;
-  width: 50%;
+  width: 70%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+
+  @media screen and (max-width: 800px) {
+    /* display: block; */
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export default QR_Introduction

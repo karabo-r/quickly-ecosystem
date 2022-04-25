@@ -14,7 +14,7 @@ const Container = styled.ul`
     display: flex;
     position: absolute;
     bottom: 3rem;
-    right: 5rem;
+    right: 4rem;
     
     li{
         padding: 0.6rem;
