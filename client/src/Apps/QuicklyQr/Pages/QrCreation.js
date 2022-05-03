@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, Title2, Description } from '../../Styles/Base_Style'
+import { Button, Title2, Description } from '../../../Styles/Base_Style'
 
 
-const QR_Creation = (props) => {
+const QrCreation = (props) => {
   
 
   return (
@@ -52,4 +52,4 @@ const ConnectionError = styled.h3`
   bottom: 10rem;
   /* margin-top: 2rem; */
 `
-export default QR_Creation
+export default QrCreation

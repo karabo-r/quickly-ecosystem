@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Title, Button, Description } from '../../Styles/Base_Style'
+import { Title, Button, Description } from '../../../Styles/Base_Style'
 // import 
 
 
-const QR_Introduction = (props) => {
+const QrIntroduction = (props) => {
 
   return (
     <Container>
@@ -42,4 +42,4 @@ const Container = styled.div`
   }
 `;
 
-export default QR_Introduction
+export default QrIntroduction

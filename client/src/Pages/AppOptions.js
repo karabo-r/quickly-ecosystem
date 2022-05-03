@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
 
-const App_Options = (props) => {
+const AppOptions = (props) => {
 
 
   const prepareAppView = (e) => {
@@ -97,4 +97,4 @@ const Button = styled.button`
     color: #050A30
  }
 `
-export default App_Options
+export default AppOptions

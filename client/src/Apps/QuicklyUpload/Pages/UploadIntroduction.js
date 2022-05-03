@@ -1,6 +1,6 @@
 import React from 'react'
-import { Title, Button, Description } from '../../Styles/Base_Style'
-const Upload_Introduction = (props) => {
+import { Title, Button, Description } from '../../../Styles/Base_Style'
+const UploadIntroduction = (props) => {
   return (
     <>
     <Title>Quickly Upload</Title>
@@ -12,4 +12,4 @@ const Upload_Introduction = (props) => {
   )
 }
 
-export default Upload_Introduction
+export default UploadIntroduction

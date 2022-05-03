@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import styled from "styled-components";
-import Upload_Introduction from './Upload_Introduction';
-import Upload_Creation from './Upload_Creation';
+import UploadCreation from './Pages/UploadCreation';
+import UploadIntroduction from './Pages/UploadIntroduction';
+
 
 
 
@@ -20,8 +21,8 @@ const Quickly_Upload = (props) => {
   return (
     <Container>
       {viewIntroduction 
-      ? <Upload_Introduction {...propsCollection}/> 
-      : <Upload_Creation {...propsCollection}/> }
+      ? <UploadIntroduction {...propsCollection}/> 
+      : <UploadCreation {...propsCollection}/> }
     </Container>
   )
 }

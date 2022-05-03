@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Button } from '../../Styles/Base_Style'
 
 
-const Upload_Creation = () => {
+const UploadCreation = () => {
 
   const [imageUrl, setimage] = useState('')
 
@@ -71,4 +71,4 @@ const DropArea = styled.div`
 `
 
 
-export default Upload_Creation
+export default UploadCreation

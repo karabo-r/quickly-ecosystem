@@ -1,18 +1,18 @@
 import React from 'react'
-import {BrowserRouter as Router, Routes,Route} from 'react-router-dom'
+import {Routes,Route} from 'react-router-dom'
 
-import Home_Page from '../Pages/Home_Page';
-import AppsDisplay from '../Pages/AppsDisplay';
-import Quickly_QR from '../Apps/Quickly_QR/Quickly_QR';
+import Home from '../Pages/Home';
+import QuicklyQr from '../Apps/QuicklyQr/QuicklyQr';
+import AppOptions from '../Pages/AppOptions';
 
 
 const GlobalRouting = () => {
   return (
     <>
      <Routes>
-            <Route path='/' element={<Home_Page/>}/>
-            <Route path='/options' element={<AppsDisplay/>}/>
-            <Route path='/options/quickly-qr' element={<Quickly_QR/>}/>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/options' element={<AppOptions/>}/>
+            <Route path='/options/quickly-qr' element={<QuicklyQr/>}/>
         </Routes>
 
     </>

@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react'
-import QR_Introduction from './QR_Introduction'
-import QR_Creation from './QR_Creation'
+import QrIntroduction from './Pages/QrIntroduction'
+import QrCreation from './Pages/QrCreation'
 import FetchImage from './API/FetchImage'
 import DownloadImage from './API/DownloadImage'
 import { useSearchParams } from 'react-router-dom'
 
-const Quickly_QR = () => {
+const QuicklyQr = () => {
 
   const [searchParams, setSearchParams] = useSearchParams({})
   const [viewIntroduction, setViewIntroduction] = useState(true)
@@ -52,12 +52,12 @@ const Quickly_QR = () => {
     <>
       {viewIntroduction 
       // eslint-disable-next-line react/jsx-pascal-case
-      ? <QR_Introduction {...propsCollection}/> 
+      ? <QrIntroduction {...propsCollection}/> 
       // eslint-disable-next-line react/jsx-pascal-case
-      : <QR_Creation {...propsCollection}/> }
+      : <QrCreation {...propsCollection}/> }
     </>
   )
 }
 
 
-export default Quickly_QR
+export default QuicklyQr

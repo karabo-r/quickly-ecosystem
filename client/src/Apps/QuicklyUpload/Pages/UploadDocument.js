@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from '../../Styles/Base_Style'
+import { Button } from '../../../Styles/Base_Style'
 
 const UploadDocument = (props) => {
   return (
