@@ -28,9 +28,14 @@ const QuicklyQr = () => {
   }
 
   const generateQrImage = () => {
-    setSearchParams("")
-    textInputRef.current.value = ''
-    FetchImage(text, setImagelink, setqrcreated, setFailedToGenerate)
+    if (text) {
+      setSearchParams("")
+      setFailedToGenerate(false)
+      textInputRef.current.value = ''
+      FetchImage(text, setImagelink, setqrcreated, setFailedToGenerate)
+      } else {
+        setFailedToGenerate(true)
+      }
   }
 
   const handleImageDownload = () =>{
