@@ -9,16 +9,16 @@ const QrCreation = (props) => {
   return (
     <>
     <Title2>Quickly QR</Title2>
-    {!props.qrcreated && 
+    {!props.isQrcreated && 
       <>
-      <TextArea ref={props.textInputRef} onChange={props.handleTextInput}></TextArea>
+      <TextArea ref={props.textInputRef} onChange={props.handleTextInput} autoFocus></TextArea>
       <Button onClick={props.generateQrImage}>generate</Button>
       {props.failedToGenerate &&
       <ConnectionError>Connect to the internet or try again later</ConnectionError>
       }
     </>}
 
-    {props.qrcreated && 
+    {props.isQrcreated && 
     <>
       <div id='imageContainer'>
         <img src={props.imageLink} alt='image of the generated QR code'/>
