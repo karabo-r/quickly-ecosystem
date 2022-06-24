@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Title, Button, Description } from '../../../Styles/Base_Style'
-// import 
+
 
 
 const QrIntroduction = (props) => {
@@ -33,7 +33,6 @@ const Container = styled.div`
 
 
   @media screen and (max-width: 800px) {
-    /* display: block; */
     width: 100%;
     overflow: auto;
     display: flex;

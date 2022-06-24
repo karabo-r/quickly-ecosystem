@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 import QrIntroduction from './Pages/QrIntroduction'
 import QrCreation from './Pages/QrCreation'
-import DownloadImage from './Modules/DownloadImage'
+import DownloadImage from './components/DownloadImage'
 import { useSearchParams } from 'react-router-dom'
-import services from './API/services'
+import services from './components/services'
 
 
 const QuicklyQr = () => {
@@ -16,6 +16,8 @@ const QuicklyQr = () => {
   const [text, setText] = useState(
     searchParams.get("text")
   )
+
+  const [playLoadAnimation, setPlayLoadAnimation] = useState(false)
 
   const textInputRef = useRef(null)
 
@@ -35,7 +37,7 @@ const QuicklyQr = () => {
   const generateQrImage = () => {
     if (text) {
       resetStatesToDefault()
-      services.fetchImage(text, setImagelink, setIsQrcreated, setFailedToGenerate)
+      services.fetchImage(text, setImagelink, setIsQrcreated, setPlayLoadAnimation, setFailedToGenerate)
       } else {
         setFailedToGenerate(true)
       }
@@ -51,6 +53,7 @@ const QuicklyQr = () => {
     handleImageDownload,
     handleTextInput,
     generateQrImage,
+    playLoadAnimation,
     failedToGenerate,
     textInputRef,
     isQrcreated,

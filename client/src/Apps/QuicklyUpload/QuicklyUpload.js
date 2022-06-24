@@ -1,28 +1,29 @@
 import React,{useState} from 'react'
 import styled from "styled-components";
-import UploadCreation from './Pages/UploadCreation';
+import UploadFile from './Pages/UploadFile';
 import UploadIntroduction from './Pages/UploadIntroduction';
 
-
-
-
-const Quickly_Upload = (props) => {
+const Quickly_Upload = () => {
 
   const [viewIntroduction, setViewIntroduction] = useState(true)
 
-  function changeIntroductionView(){
-    setViewIntroduction(false)
-  }
+  const changeIntroductionView = () => setViewIntroduction(false)
     
-  const propsCollection = {
-    changeIntroductionView
+  function onFileUpload(file){
+    console.log(file);
   }
+
+  const propsCollection = {
+    changeIntroductionView,
+    onFileUpload
+  }
+
 
   return (
     <Container>
       {viewIntroduction 
       ? <UploadIntroduction {...propsCollection}/> 
-      : <UploadCreation {...propsCollection}/> }
+      : <UploadFile {...propsCollection}/> }
     </Container>
   )
 }
@@ -30,8 +31,6 @@ const Quickly_Upload = (props) => {
 
 
 const Container = styled.div`
-/* background-color: rebeccapurple; */
-  /* height: 100vh;  */
   font-family: Arial;
   display: flex;
   width: 50%;
