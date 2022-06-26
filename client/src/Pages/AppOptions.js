@@ -17,6 +17,13 @@ const AppOptions = () => {
 					</Link>
 				</Box>
 				<Box>
+					<Title>Notes</Title>
+					<Description>Before you forget it.</Description>
+					<Link to="/quickly-notes">
+						<Button>Write</Button>
+					</Link>
+				</Box>
+				<Box>
 					<Title>Upload</Title>
 					<Description>Save files</Description>
 					<Link to="/quickly-upload">

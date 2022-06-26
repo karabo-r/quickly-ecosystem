@@ -6,6 +6,8 @@ import "./index.css"
 import App from "./App";
 
 
+// const root = createRoo
+
 ReactDOM.render(
     // <RecoilRoot>
         <App />,

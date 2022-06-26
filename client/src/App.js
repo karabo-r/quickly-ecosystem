@@ -4,10 +4,13 @@ import Logo from './Components/Logo';
 import Contacts from './Components/Contacts';
 import {BrowserRouter as Router} from 'react-router-dom'
 import GlobalRouting from './Routes/GlobalRouting';
+import { RecoilRoot } from 'recoil';
 
 
 const App = () => {
   return (
+    <RecoilRoot>
+
     <Router>
     <Container>
       <Logo />
@@ -15,6 +18,7 @@ const App = () => {
       <Contacts/>
     </Container>
     </Router>
+    </RecoilRoot>
   )
 }
 
